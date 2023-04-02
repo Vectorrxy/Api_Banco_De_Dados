@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+    <title>API de usuários</title>
+</head>
+<body>
+    <h1>Buscar usuário</h1>
+    <form action="busca.php" method="GET"">
+        CPF: <input type="number" name="cpf">
+        <button type="submit">Buscar</button><br><br>
+    </form>
+    <form action="index.html" method="POST">
+        <button type="submit">Voltar</button>
+    </form>
+</body>
+</html>
