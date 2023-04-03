@@ -13,6 +13,7 @@
             $usuarios = json_decode(file_get_contents('usuarios.json'), true);
         }
         $usuarios[] = $usuario;
+        echo __DIR__;
         file_put_contents('usuarios.json', json_encode($usuarios,JSON_PRETTY_PRINT));
         if(isset($usuario)) {
             echo 'Cadastrado com sucesso';
