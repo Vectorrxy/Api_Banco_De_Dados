@@ -9,12 +9,11 @@
         $usuario = new Usuario($cpf,$nome,$data_nascimento);
         // Guarda o usuário em um arquivo
         $usuarios = [];
-        if (file_exists('usuarios.json')) {
+        if (file_exists('./usuarios.json')) {
             $usuarios = json_decode(file_get_contents('usuarios.json'), true);
         }
         $usuarios[] = $usuario;
-        echo __DIR__;
-        file_put_contents('usuarios.json', json_encode($usuarios,JSON_PRETTY_PRINT));
+        file_put_contents('./usuarios.json', json_encode($usuarios,JSON_PRETTY_PRINT));
         if(isset($usuario)) {
             echo 'Cadastrado com sucesso';
             echo '<form action="cadastro.html" method="POST">';
