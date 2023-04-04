@@ -1,7 +1,6 @@
 <?php
 require_once 'autoload.php';
 use usuario;   
-header("Access-Control-Allow-Origin: https://editor.swagger.io");
 
 $cpf = $_GET['cpf'];
 // Busca o usuário no arquivo
@@ -27,5 +26,14 @@ foreach ($usuarios as $usuario) {
     }
 }
 echo 'Usuário não encontrado';
+
+echo '<form action="busca.html" method="POST">';
+echo '<button type="submit">Voltar Busca</button>';
+echo '</form>';
+
+echo '<form action="index.html" method="POST">';
+echo '<button type="submit">Voltar Home</button>';
+echo '</form>';
+exit;
 ?> 
 
